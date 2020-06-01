@@ -11,13 +11,11 @@ z = "I like turtles!"
 # Using the printf operator (%), print the following feeding in the values of x,
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
-print(f'x is {x}, y is {y+.25448}, z is {z}')
+print("x is %2i, y is %2.1f, z is %s "%(x, y+.25448, z))
 
 # Use the 'format' string method to print the same thing
 string = "x is {ten}, y is {two}, z is {like}"
 print(string.format(ten= x, two= (y+.25448), like = z))
+
 # Finally, print the same thing using an f-string
-ten = x
-two = y+.25448
-like = z
-print(f"x is {ten}, y is {two}, z is {like}")
+print(f"x is {x}, y is {y+.25448}, z is {z}")
