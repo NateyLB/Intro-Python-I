@@ -30,3 +30,18 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+def date(*args):
+  print(len(args))
+  if len(args) == 0:
+    print(calendar.month(2020, 6))
+  elif len(args) == 1:
+    print(calendar.month(2020, args[0]))
+  elif len(args) == 2:
+    print(calendar.month(args[1], args[0]))
+  else:
+    print("Usage: cal.py [month [year]]  ")
+
+x = input("Enter a month then year seperted by a space: ").split(' ')
+y = [int(z) for z in x ]
+date(*y)
