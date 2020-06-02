@@ -41,7 +41,8 @@ def date(*args):
     print(calendar.month(args[1], args[0]))
   else:
     print("Usage: cal.py [month [year]]  ")
-
-x = input("Enter a month then year seperted by a space: ").split(' ')
-y = [int(z) for z in x ]
+w = sys.argv
+w.pop(0)
+y = [int(z) for z in w ]
+print(y)
 date(*y)
