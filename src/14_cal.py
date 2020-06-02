@@ -32,9 +32,8 @@ import calendar
 from datetime import datetime
 
 def date(*args):
-  print(len(args))
   if len(args) == 0:
-    print(calendar.month(2020, 6))
+    print(calendar.month(datetime.today().year, datetime.today().month))
   elif len(args) == 1:
     print(calendar.month(2020, args[0]))
   elif len(args) == 2:
@@ -44,5 +43,4 @@ def date(*args):
 w = sys.argv
 w.pop(0)
 y = [int(z) for z in w ]
-print(y)
 date(*y)
